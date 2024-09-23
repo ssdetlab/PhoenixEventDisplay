@@ -1,0 +1,31 @@
+{
+    "LDMX_Event": {
+	"event number" : 0,
+	"run number": 0,
+	"Hits": {
+	    "TaggerHits" : [
+		{
+		    "type" : "Box",
+		    "pos"  : [
+			0,
+			0,
+			10,
+			20,
+			20,
+			20
+		    ]
+		},
+		{ "type" : "Box",
+		  "pos" : [
+		      0,
+		      0,
+		      20,
+		      20,
+		      20,
+		      20
+		  ]
+		}
+	    ]
+	}
+    }
+}

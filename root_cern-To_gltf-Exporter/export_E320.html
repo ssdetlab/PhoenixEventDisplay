@@ -1,0 +1,81 @@
+<html>
+
+  <head>
+    <script src="https://unpkg.com/three@0.139.1/build/three.js"> </script>
+    <script src="https://unpkg.com/three@0.139.1/examples/js/exporters/GLTFExporter.js"> </script>
+    <!-- <script src="https://root.cern/js/7.6.1/scripts/JSRoot.core.js"> </script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+  </head>
+
+<body>
+    <script type="module">
+    
+    import { convertGeometry } from './phoenixExport.js';
+
+    var hide_children = [];
+
+    // // -----------------------------------------------------------------------------------------------
+    // // DetChamberContainer
+    // var subparts = {
+        // "DetectorChamber > Chamber" : [["logicDetChamberContainer_pv"], true],
+    // }
+    // convertGeometry("./ettgeom_no_tunnel.root", "DetChamberContainer.gltf", 10, subparts, hide_children);
+
+    // // DetChamberSupport
+    // subparts = {
+        // "DetectorChamber > Chamber" : [["logicDetChamberSupport_pv"], true],
+    // }
+    // convertGeometry("./ettgeom_no_tunnel.root", "DetChamberSupport.gltf", 10, subparts, hide_children);
+
+    // -----------------------------------------------------------------------------------------------
+    // OPPPTracker
+    subparts = {
+        "DetectorChamber > Chamber" : [["OPPPTracker"], true],
+    }
+
+    convertGeometry("./ettgeom_no_tunnel.root", "OPPPTracker.gltf", 10, subparts, hide_children);
+
+    // OPPPSupportMiddleBar
+    var subparts = {
+        "DetectorChamber > Chamber" : [["logicOPPPSupportMiddleBar_pv"], true],
+    }
+    convertGeometry("./ettgeom_no_tunnel.root", "OPPPSupportMiddleBar.gltf", 10, subparts, hide_children);
+
+    // OPPPSupportBar
+    var subparts = {
+        "DetectorChamber > Chamber" : [["logicOPPPSupportBar_pv"], true],
+    }
+    convertGeometry("./ettgeom_no_tunnel.root", "OPPPSupportBar.gltf", 10, subparts, hide_children);
+
+    // OPPPSupportCrossBar
+    var subparts = {
+        "DetectorChamber > Chamber" : [["logicOPPPSupportCrossBar_pv"], true],
+    }
+    convertGeometry("./ettgeom_no_tunnel.root", "OPPPSupportCrossBar.gltf", 10, subparts, hide_children);
+
+    // OPPPSupportJoin
+    var subparts = {
+        "DetectorChamber > Chamber" : [["logicOPPPSupportJoin_pv"], true],
+    }
+    convertGeometry("./ettgeom_no_tunnel.root", "OPPPSupportJoin.gltf", 10, subparts, hide_children);
+
+    // OPPPSupportHolder
+    var subparts = {
+        "DetectorChamber > Chamber" : [["logicOPPPSupportHolder_pv"], true],
+    }
+    convertGeometry("./ettgeom_no_tunnel.root", "OPPPSupportHolder.gltf", 10, subparts, hide_children);
+
+    // OPPPDetSupportTableTop
+    var subparts = {
+        "DetectorChamber > Chamber" : [["logicOPPPDetSupportTableTop_pv"], true],
+    }
+    convertGeometry("./ettgeom_no_tunnel.root", "OPPPDetSupportTableTop.gltf", 10, subparts, hide_children);
+
+    // OPPPDetSupportTableLeg
+    var subparts = {
+        "DetectorChamber > Chamber" : [["logicOPPPDetSupportTableLeg_pv"], true],
+    }
+    convertGeometry("./ettgeom_no_tunnel.root", "OPPPDetSupportTableLeg.gltf", 10, subparts, hide_children);
+
+    </script>
+</body>
